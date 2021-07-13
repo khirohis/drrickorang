@@ -1328,6 +1328,29 @@ public class LoopbackActivity extends Activity
         }
     }
 
+
+    /** Show help. */
+    public void onButtonHelp(View view) throws InterruptedException {
+        if (!isBusy()) {
+            // Launch about Activity
+            Intent aboutIntent = new Intent(this, AboutActivity.class);
+            startActivity(aboutIntent);
+        } else {
+            showToast("Test in progress... please wait");
+        }
+    }
+
+    /** Show setting menu. */
+    public void onButtonSettings(View view) throws InterruptedException {
+        if (!isBusy()) {
+            // Launch settings activity
+            Intent mySettingsIntent = new Intent(this, SettingsActivity.class);
+            startActivityForResult(mySettingsIntent, SETTINGS_ACTIVITY_REQUEST);
+        } else {
+            showToast("Test in progress... please wait");
+        }
+    }
+
     public void onButtonCalibrateSoundLevel(final View view) {
         Message m = Message.obtain();
         m.what = CALIBRATION_STARTED;

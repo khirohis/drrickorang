@@ -55,6 +55,28 @@
                 style="@style/TextAppearance.AppCompat.Button"
                 android:onClick="onButtonBufferTest"/>
 
+            <Button
+                android:id="@+id/buttonHelp"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_help"
+                android:drawableLeft="@drawable/ic_help"
+                android:onClick="onButtonHelp"
+                android:text="Help" />
+
+            <Button
+                android:id="@+id/buttonSettings"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_settings"
+                android:drawableLeft="@drawable/ic_settings"
+                android:onClick="onButtonSettings"
+                android:text="Settings" />
+
         </LinearLayout>
     </HorizontalScrollView>
 
